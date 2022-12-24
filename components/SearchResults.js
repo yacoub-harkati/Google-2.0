@@ -3,11 +3,12 @@ import crypto from "crypto"
 import PaginationButtons from "./PaginationButtons"
 
 export default function SearchResults({ results }) {
+    console.log(results)
 	return (
-		<div className="w-screen px-3">
+		<div className="px-3">
 			<p className="text-gray-600 text-md mb-5">
-				About {results.searchInformation.formattedTotalResults} results (
-				{results.searchInformation.formattedSearchTime} seconds)
+				About {results.searchInformation?.formattedTotalResults} results (
+				{results.searchInformation?.formattedSearchTime} seconds)
 			</p>
 			{results.items?.map((result) => (
 				<div
