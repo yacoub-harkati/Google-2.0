@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.link {
+		@apply cursor-pointer hover:underline;
+	}
+	.btn {
+		@apply px-6 py-2 ring-gray-100 ring-1 cursor-pointer outline-none rounded-2xl inline-block bg-[#f8f9fa] hover:ring-gray-300 active:ring-gray-300 hover:shadow-md;
+	}
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
