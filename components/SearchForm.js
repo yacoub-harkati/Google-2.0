@@ -1,11 +1,11 @@
 import Image from "next/image"
 import SearchInput from "./SearchInput"
-import {useRouter} from "next/router"
+import { useRouter } from "next/router"
 import { useContext } from "react"
 import { InputContext } from "../context/InputContext"
 
 export default function SearchForm() {
-	const context= useContext(InputContext)
+	const context = useContext(InputContext)
 	const router = useRouter()
 
 	return (
@@ -20,13 +20,13 @@ export default function SearchForm() {
 					router.push("/")
 				}}
 			/>
-			<SearchInput/>
+			<SearchInput />
 			<div className="flex flex-col w-1/2 max-w-sm space-y-4 sm:max-w-md sm:space-x-4 sm:space-y-0 mt-6 sm:flex-row sm:justify-center sm:items-center">
 				<button type="submit" className="btn" onClick={context.search}>
 					Search Google
 				</button>
 				<button type="button" className="btn">
-					I'm feeling lucky!
+					I'm feeling lucky! Tonight
 				</button>
 			</div>
 		</form>
